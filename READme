@@ -1,0 +1,131 @@
+
+# Central Ohio Real Estate FAQ – DOM & BOM Project
+
+## 📌 Project Overview
+
+This project is a client-side JavaScript application that demonstrates core **DOM (Document Object Model)** and **BOM (Browser Object Model)** concepts. The application presents a real-estate FAQ page with dynamic behavior, form validation, user interaction handling, and templated content generation.
+
+The focus of this project is **correct usage of DOM manipulation, event handling, validation, and browser APIs**, not visual complexity.
+
+
+🧱 Technologies Used
+
+* HTML5
+* CSS3
+* Vanilla JavaScript (ES6)
+* Browser Developer Tools (Console)
+
+
+ ✅ Implemented Requirements
+
+1. HTML Structure
+
+* Semantic HTML elements (`header`, `main`, `footer`, `form`)
+* FAQ content structured using reusable `.faq-item` containers
+* `<template>` element used for dynamic content generation
+
+2. Form with HTML Attribute Validation
+
+The subscription form includes built-in HTML validation:
+
+* `required` attributes on inputs
+* `type="email"` for automatic email format validation
+
+```html
+<input type="email" id="email" name="email" required>
+```
+
+3. DOM Event-Based Validation (in addition to HTML validation)
+
+In addition to HTML validation, JavaScript event-based validation is implemented:
+
+* A `blur` event listener on the email input
+* Visual feedback (red border) when the user leaves the field empty
+* Border resets once valid input is provided
+
+This provides **real-time UI feedback** before form submission.
+
+
+4. Event Listeners & Event Handlers
+
+At least **two different event listeners** are registered:
+
+| Event              | Target        | Purpose                              |
+| ------------------ | ------------- | ------------------------------------ |
+| `DOMContentLoaded` | `document`    | Initialize DOM-dependent logic       |
+| `submit`           | `form`        | Validate and process form submission |
+| `blur`             | `email input` | Event-based input validation         |
+
+Each event has an associated handler function.
+
+
+5. DOM Manipulation
+
+The project demonstrates multiple DOM manipulation techniques:
+
+* `createElement()` to generate new content
+* `appendChild()` and `insertBefore()` to insert elements
+* `classList.add()` to modify CSS classes dynamically
+* `style` property for inline styling updates
+* Iteration over element collections using loops
+
+
+6. Template & cloneNode Usage
+
+Reusable FAQ items are generated using:
+
+* `<template>` element in HTML
+* `cloneNode(true)` in JavaScript
+* Dynamic insertion relative to the template’s position in the DOM
+
+This allows flexible placement without hard-coding container locations.
+
+
+7. Browser Object Model (BOM) Usage
+
+At least **two BOM methods/properties** are used:
+
+* `window.alert()` – user feedback after form submission
+* `console.log()` – debugging and inspection via DevTools
+
+
+8. Styling & CSS Class Manipulation
+
+In response to user interaction:
+
+* The form receives a `submitted` class after successful submission
+* CSS visually updates the form to indicate completion
+
+
+9. Error Prevention & Stability
+
+To ensure the program runs without errors:
+
+* All DOM-dependent logic is wrapped in `DOMContentLoaded`
+* Event listeners are attached at appropriate lifecycle stages
+* Duplicate or unsafe operations were removed or corrected
+* Features that could cause runtime errors were debugged and stabilized
+
+Blockers encountered (such as variable scope issues) were resolved by:
+
+* Moving logic into correct scopes
+* Ensuring listeners are registered before use
+* Avoiding duplicate DOM insertions
+
+
+🧪 How to Run the Project
+
+1. Open the HTML file in a modern web browser
+2. Open Developer Tools (Inspect → Console)
+3. Interact with the form and FAQ sections
+4. Observe validation behavior, alerts, and dynamic content insertion
+
+
+🧠 Key Learning Outcomes
+
+* Understanding the difference between DOM and BOM
+* Correctly managing JavaScript scope and timing
+* Implementing both HTML and JavaScript-based validation
+* Using templates for reusable UI components
+* Debugging real-world JavaScript errors effectively
+
