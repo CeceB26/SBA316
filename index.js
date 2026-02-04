@@ -22,6 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const emailInput = document.getElementById("email");
   const yesRadio = document.getElementById("subscribe-yes");
   const noRadio = document.getElementById("subscribe-no");
+   // ✅ Event-based validation (runs when user leaves the email field)
+  emailInput.addEventListener("blur", function () {
+    if (emailInput.value.trim() === "") {
+      emailInput.style.border = "2px solid red";
+    } else {
+      emailInput.style.border = "";
+    }
+  });
 //Event Listener #2
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -40,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Please complete all fields.");
       return;
     }
+});
 
     const message = document.createElement("p");
      //Text modification method used
@@ -59,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     form.reset();
   });
-});
 
 //Iterate a collection of elements 
 const faqItems = document.getElementsByClassName("faq-item");
