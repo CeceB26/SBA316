@@ -94,7 +94,6 @@
         }
     </style>
 </head>
-
 <body>
 
 <header>
@@ -136,11 +135,13 @@
     <div class="faq-item">
         <h3>Does having an ADU increase my property value?</h3>
         <p>In many cases, yes. ADUs can add rental income potential and appeal to multi-generational buyers, but value impact depends on location and zoning compliance.</p>
+
     </div>
+    
 
     <h2>Stay Connected</h2>
 
-    <form action="#" method="post">
+<form id="subscribe-form" action="#" method="post">
         <h3>Get Real Estate Updates</h3>
 
         <label for="name">Full Name</label>
@@ -160,12 +161,19 @@
 
         <button type="submit">Submit</button>
     </form>
-
+ <template id="faq-template">
+  <div class="faq-item">
+    <h3></h3>
+    <p></p>
+  </div>
+</template>
 </main>
 
 <footer>
     <p>&copy; 2026 Central Ohio Real Estate. All rights reserved.</p>
 </footer>
 
+
+<script src="../SBA316/index.js" defer></script>
 </body>
 </html>
