@@ -6,21 +6,23 @@ console.log(subscribeForm);
 //Chache the Raido Buttons
 const radioButtons = document.querySelectorAll("input[name='subscribe']");
 //Logged to confirm results
+//BOM method #2
 console.log(radioButtons);
 
 /*This is making it so the following is happening.
  1. all fields are required to be completed and with the correct formating in order to submit. 
  2.If not message will appear to advise end user how to correct. 
- 3.The browser will store previous used inpots and pop up if input starts to match previous entry to allow for quick fill of all fields required.
+ 3.The browser will store previous used inputs and pop up if input starts to match previous entry to allow for quick fill of all fields required.
  4.Once submitted "thank You" message appears and the form reset automatically.*/
-
+ //Event Listener #1
+ //Form input with html attribute validation
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("subscribe-form");
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
   const yesRadio = document.getElementById("subscribe-yes");
   const noRadio = document.getElementById("subscribe-no");
-
+//Event Listener #2
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -45,6 +47,14 @@ document.addEventListener("DOMContentLoaded", function () {
     //parent → child insertion//
     //Used appendChild to add new element//
  // Modified attribute in response to user interaction (submit)
+    form.classList.add("submitted");
+
+     /*Modified attributes of element in response to user interaction. After the form is submited a windows alert will pop with message*/
+ // 1️⃣ Alert the user
+ //BOM method #1
+    window.alert("Thank you for subscribing!");
+
+// 2️⃣ Modify CSS class in response to interaction
     form.classList.add("submitted");
 
     form.reset();
@@ -102,6 +112,7 @@ for (let i = 0; i < newFaqs.length; i++) {
   h3.textContent = newFaqs[i].question;
   p.textContent = newFaqs[i].answer;
 
-  mainSection.appendChild(clone);
+template.parentNode.insertBefore(clone, template);
 }
- //Modified attributes of element in response to user interaction
+
+

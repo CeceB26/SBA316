@@ -149,3 +149,8 @@ footer {
 .submitted {
   box-shadow: 0 0 0 3px rgba(31, 58, 95, 0.35);
 }
+/*Alert*/
+form.submitted {
+  border: 3px solid #1f3a5f;
+  background-color: #f0f6ff;
+}
